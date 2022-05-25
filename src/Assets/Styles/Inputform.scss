@@ -1,44 +1,49 @@
 @import "variable";
 
-.Inp-Container{
-    display: $display-flex;
-    justify-content: $j-content-ev;
+.Inp-Container {
     padding-top: $padding--t--30;
 
-    .inp-field{
-        width: $width-50--per;
-        font-family: $font-family--poppins;
-        font-size: 15px;
-        padding: 15px;
-        border-radius: $boder-rad-10--px;
-        border:$border-none;
-        background: rgba(255,255,255,0.05);
-        backdrop-filter: blur(10px);
-        border-top: 1px solid rgba(255,255,255,0.2);
-        border-left: 1px solid rgba(255,255,255,0.2);
-        box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
-        color:  $color-Ghost-white;
-        outline: $outline-none;
-        caret-color: rgba(0,0,0,0.2);
+    .task-Container {
+        display: $display-flex;
+        justify-content: $j-content-ev;
 
-        &::placeholder{
+
+        .inp-field {
+            width: $width-50--per;
             font-family: $font-family--poppins;
             font-size: 15px;
-            color:  $color-Ghost-white;
+            padding: 15px;
+            border-radius: $boder-rad-10--px;
+            border: $border-none;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+            color: $color-Ghost-white;
+            outline: $outline-none;
+            caret-color: rgba(0, 0, 0, 0.2);
+
+            &::placeholder {
+                font-family: $font-family--poppins;
+                font-size: 15px;
+                color: $color-Ghost-white;
+            }
+        }
+
+        .Add-btn {
+            width: $width-25--per;
+            font-family: $font-family--poppins;
+            font-size: 15px;
+            color: $color-Ghost-white;
+            border-radius: $boder-rad-10--px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            // border-top: 1px solid rgba(255,255,255,0.2);
+            // border-left: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+            border: $border-none;
         }
     }
 
-    .Add-btn{
-        width: $width-25--per;
-        font-family: $font-family--poppins;
-        font-size: 15px;
-        color:  $color-Ghost-white;
-        border-radius: $boder-rad-10--px;
-        background: rgba(255,255,255,0.05);
-        backdrop-filter: blur(10px);
-        // border-top: 1px solid rgba(255,255,255,0.2);
-        // border-left: 1px solid rgba(255,255,255,0.2);
-        box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
-        border: $border-none;
-    }
 }
