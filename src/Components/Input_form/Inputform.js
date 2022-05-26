@@ -13,7 +13,8 @@ function InputField(props) {
     }
   });
 
-  const [addTodo, setTodo] = useState("");
+  const [todo, setTodo] = useState("");
+  const[editIndex,setEditIndex] =useState(-1);
 
   // Remove Data functionality 
   const removeData =(index)=>{
@@ -25,17 +26,26 @@ function InputField(props) {
 
   // Edit data functionality
   const editData= (index)=>{
-
     const newTodos = todoList[index];
     setTodo(newTodos);
-  
+    setEditIndex(index);  
   }
+  
+  // console.log('index edit :>> ', todo);
 
   const submitChanges = (e) => {
     e.preventDefault();
-    
-    setTodoList([...todoList,addTodo]);
-    setTodo("");
+
+    if(editIndex>0){
+      todoList[editIndex]=todo;
+      setTodoList([...todoList])
+      setTodo("");
+    }else{
+      setTodoList([...todoList,todo]);
+      setTodo("");
+      setEditIndex(true);
+    } 
+    setEditIndex(false);
   }
   
 
@@ -53,11 +63,14 @@ function InputField(props) {
           type={props.type} 
           placeholder={props.placeholder} 
           onChange={(e) => setTodo(e.target.value)} 
-          value={addTodo} required/>
-        <button className='Add-btn'>Add Task</button>
+          value={todo} required/>
+        <button className='Add-btn'>{editIndex>0 ? "Update Task" : "Add task"}</button>
       </form>
       
-      <TodoList list = {todoList} removeData={removeData} editData={editData}/>
+      <TodoList list = 
+        {todoList} 
+        removeData={removeData} 
+        editData={editData}/>
     </div>
   );
 }

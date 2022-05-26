@@ -98,11 +98,10 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  /* align-items: center; */
+  outline: none;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  /* justify-content: center; */
   background: transparent;
   border: none;
   border-radius: 0.5rem;
