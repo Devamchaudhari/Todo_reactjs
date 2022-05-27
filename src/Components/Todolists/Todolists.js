@@ -2,7 +2,8 @@ import React, { useState} from 'react';
 import { TrashCanIcon, EditIcon, UncheckedIcon, CheckIcon } from "../Icons/Icons";
 function TodoList(props) {
      const [checkedArr,setCheckedArr]= useState([]);
-    const handleCheck =(index)=>{
+     const handleCheck =(index)=>{
+
         if (checkedArr.indexOf(index)>-1) {
             console.log('if index :>> ', index);
             let newArr= [...checkedArr];

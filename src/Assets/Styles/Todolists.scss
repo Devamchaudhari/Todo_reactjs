@@ -33,13 +33,13 @@
 
         .added-task {
             width: 85%;
+            word-break: break-all;
             display: flex;
             justify-content: space-between;
             margin: 15px auto;
             border-radius: 10px;
             border: none;
             background: rgba(255, 255, 255, 0.05);
-            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border-top: 1px solid rgba(255, 255, 255, 0.2);
             border-left: 1px solid rgba(255, 255, 255, 0.2);
@@ -74,6 +74,7 @@
 
             .edit-del-wraper {
                 display: flex;
+                align-items: center;
                 .delete-btn {
                     color: #ff3f4f;
                     cursor: pointer;

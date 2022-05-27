@@ -36,6 +36,7 @@
 
 .task-container .list-container .added-task {
   width: 85%;
+  word-break: break-all;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +48,7 @@
   border: none;
   background: rgba(255, 255, 255, 0.05);
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -89,6 +90,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .task-container .list-container .added-task .edit-del-wraper .delete-btn {
