@@ -1,0 +1,158 @@
+.task-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 18px auto;
+}
+
+.task-container .list-container {
+  width: 100%;
+  height: 311px;
+  overflow-y: scroll;
+  padding-top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  /* Track */
+  /* Handle */
+}
+
+.task-container .list-container::-webkit-scrollbar {
+  width: 7px;
+}
+
+.task-container .list-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+.task-container .list-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.task-container .list-container .added-task {
+  width: 85%;
+  word-break: break-all;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px auto;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.task-container .list-container .added-task:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.task-container .list-container .added-task .uncheck-btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 2.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: white;
+}
+
+.task-container .list-container .added-task .uncheck-btn .uncheck-icon {
+  position: absolute;
+  left: 0.5rem;
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.task-container .list-container .added-task .edit-del-wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.task-container .list-container .added-task .edit-del-wraper .delete-btn {
+  color: #ff3f4f;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  outline: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 12px 15px;
+  font-size: 1rem;
+}
+
+.task-container .list-container .added-task .edit-del-wraper .delete-btn:hover {
+  background: rgba(244, 91, 105, 0.5);
+}
+
+.task-container .list-container .added-task .edit-del-wraper .delete-btn .delete-icon {
+  width: 1.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 1.25em;
+}
+
+.task-container .list-container .added-task .edit-del-wraper .Edit-btn {
+  color: #ff3f4f;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 12px 15px;
+  font-size: 1rem;
+}
+
+.task-container .list-container .added-task .edit-del-wraper .Edit-btn:hover {
+  background: rgba(255, 234, 236, 0.2);
+}
+
+.task-container .list-container .added-task .edit-del-wraper .Edit-btn .Edit-icon {
+  width: 1.25em;
+  height: 1.25em;
+}
+/*# sourceMappingURL=Todolists.css.map */

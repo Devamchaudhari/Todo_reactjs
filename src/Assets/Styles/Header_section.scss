@@ -1,0 +1,27 @@
+@import "variable";
+
+.Header-container{
+    width:$width-max;   
+    display:$display-flex;
+    height: $height-700--px;
+    align-items: $alg-item--center;
+    justify-content: $j-content-center;
+    .Todo-box{
+        width: $width-50--per;
+        height:$height-500--px; 
+        background: rgba( 255, 255, 255, 0.15 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur(10px);
+        border-radius: $boder-rad-10--px;
+        border:1px solid rgba( 255, 255, 255, 0.18 );
+
+        .Header-title{
+            font-family:$font-family--poppins ;
+            font-size: 30px;
+            font-weight: $font--wg-600;
+            color: $color-Ghost-white;
+            text-align: $tex-align-cent;
+            padding-top:$padding--t--20;
+        }
+    }
+}
