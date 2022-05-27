@@ -36,16 +36,16 @@ function InputField(props) {
   const submitChanges = (e) => {
     e.preventDefault();
 
-    if(editIndex>0){
+    if(editIndex>0 || editIndex>=0){
       todoList[editIndex]=todo;
       setTodoList([...todoList])
       setTodo("");
+
     }else{
       setTodoList([...todoList,todo]);
       setTodo("");
-      setEditIndex(true);
     } 
-    setEditIndex(false);
+    setEditIndex(-1);
   }
   
 
@@ -64,7 +64,7 @@ function InputField(props) {
           placeholder={props.placeholder} 
           onChange={(e) => setTodo(e.target.value)} 
           value={todo} required/>
-        <button className='Add-btn'>{editIndex>0 ? "Update Task" : "Add task"}</button>
+        <button className='Add-btn'>{editIndex>-1 ? "Update Task" : "Add task"}</button>
       </form>
       
       <TodoList list = 
