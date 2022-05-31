@@ -1,7 +1,18 @@
-import React, { useState} from 'react';
+import React, { useState,useEffect} from 'react';
 import { TrashCanIcon, EditIcon, UncheckedIcon, CheckIcon } from "../Icons/Icons";
 function TodoList(props) {
-     const [checkedArr,setCheckedArr]= useState([]);
+     const [checkedArr,setCheckedArr]= useState(()=>{
+        const savedCheckTodos = localStorage.getItem("checkedTask");
+                if (savedCheckTodos) {
+                return JSON.parse(savedCheckTodos);
+                } else {
+                return [];
+                }
+          });
+
+     
+     
+     
      const handleCheck =(index)=>{
         if (checkedArr.indexOf(index)>-1) {
             let newArr= [...checkedArr];
@@ -10,8 +21,15 @@ function TodoList(props) {
             setCheckedArr(newArr);
         } else {
             setCheckedArr([...checkedArr,index]);
+            localStorage.removeItem("checkedTask",JSON.stringify(checkedArr));
         }
     }   
+  
+
+    useEffect(() => {
+    localStorage.setItem("checkedTask", JSON.stringify(checkedArr));
+  }, [checkedArr]
+  );
      return (
         <div className="task-container">
             <ul className='list-container'>
